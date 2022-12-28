@@ -4,8 +4,27 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg_mobile.jpg);
+  --stroke-color:rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.5);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg_mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+}
+
 body {
-  background-image: url(./assets/bg_mobile.jpg);
+  background-image: var(--bg-url);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -14,7 +33,7 @@ body {
 
 body * {
   font-family: 'Inter', sans-serif;
-  color: white;
+  color: var(--text-color);/*white;*/
 }
 
 #container {
@@ -60,9 +79,9 @@ ul li a {
 
   padding: 16px 24px;
 
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-color);
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--stroke-color);   /*stroke color sem light mode */
   
   backdrop-filter: blur(4px);
   
@@ -73,8 +92,8 @@ ul li a {
 }
 
 ul li a:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid white;
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
 }
 
 /*SOCIAL MEDIA*/
@@ -100,5 +119,11 @@ ul li a:hover {
 }
 
 #social-media a:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
 }
