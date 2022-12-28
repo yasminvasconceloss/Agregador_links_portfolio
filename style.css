@@ -24,6 +24,7 @@ body * {
   margin-left: auto;
   margin-top: 56px;
   margin-bottom: auto;
+  padding: 0 24px;
 }
 
 #profile {
@@ -48,6 +49,8 @@ ul {
   display: flex;          
   flex-direction: column;
   gap: 8px;
+
+  padding: 24px 0;
 }
 
 ul li a {
@@ -72,4 +75,30 @@ ul li a {
 ul li a:hover {
   background: rgba(255, 255, 255, 0.05);
   border: 1.5px solid white;
+}
+
+/*SOCIAL MEDIA*/
+
+#social-media {
+  display: flex;
+  justify-content: center;
+  
+  padding: 24px 0; /*24 px em cima e embaixo e 0 nas laterais*/
+
+  font-size: 24px;
+}
+
+#social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+
+}
+
+#social-media a:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
